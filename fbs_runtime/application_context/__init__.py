@@ -134,7 +134,8 @@ def is_frozen():
     Return True if running from the frozen (i.e. compiled form) of your app, or
     False when running from source.
     """
-    return getattr(sys, 'frozen', False)
+    return True
+    # return getattr(sys, 'frozen', False)
 
 def get_application_context(DevelopmentAppCtxtCls, FrozenAppCtxtCls=None):
     if FrozenAppCtxtCls is None:
